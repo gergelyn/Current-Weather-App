@@ -8,6 +8,22 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+h1 {
+  font-size: 3.75em;
+}
+
+#search-city {
+  font-size: 1.25em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+#now {
+  font-size: 1.375em;
+}
+
 header {
   display: flex;
   flex-flow: column nowrap;
@@ -15,12 +31,44 @@ header {
   align-items: center;
 }
 
-section,
-.container {
+section {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+}
+
+.current {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+  align-items: left;
+  align-self: left;
+  flex-grow: 1;
+}
+
+.forecasts-section {
+  align-self: right;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 3;
+}
+
+#temperature-btn {
+  border: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 2.5em;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
