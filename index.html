@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App</title>
+    <!-- Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Weather Forecast App</h1>
+      <div class="search-section">
+        <input
+          type="text"
+          name="search-city"
+          id="search-city"
+          placeholder="Search cities"
+        />
+        <button type="submit" id="search-btn">Search</button>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="current">
+          <h2 id="searched-city">Debrecen, HU</h2>
+          <p id="now">Now</p>
+          <button type="button" id="temperature-btn">
+            <span id="current-temperature">19°C</span>
+          </button>
+        </div>
+        <!--
+        <div class="forecasts-section">
+          <div class="forecast">
+            <h3>Sat</h3>
+          </div>
+          <div class="forecast">
+            <h3>Sun</h3>
+          </div>
+          <div class="forecast">
+            <h3>Mon</h3>
+          </div>
+          <div class="forecast">
+            <h3>Tue</h3>
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
+    <script src="./js/App.js"></script>
+  </body>
+</html>
