@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecast App</title>
-    <!-- Fonts-->
+    <!-- Assets -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -22,31 +26,39 @@
           id="search-city"
           placeholder="Search cities"
         />
-        <button type="submit" id="search-btn">Search</button>
+        <button type="submit" id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
     </header>
     <section>
       <div class="container">
+        <h2 id="searched-city">Debrecen, HU</h2>
+
         <div class="current">
-          <h2 id="searched-city">Debrecen, HU</h2>
           <p id="now">Now</p>
-          <button type="button" id="temperature-btn">
-            <span id="current-temperature">19°C</span>
-          </button>
+          <p id="current-temperature">19°C</p>
+          <div class="image">
+            <img src="" alt="OpenWeatherMap Icon" id="current-icon" />
+          </div>
         </div>
 
         <div class="forecasts-section">
           <div class="forecast">
             <h3>Sat</h3>
+            <p>24°C</p>
           </div>
           <div class="forecast">
             <h3>Sun</h3>
+            <p>24°C</p>
           </div>
           <div class="forecast">
             <h3>Mon</h3>
+            <p>24°C</p>
           </div>
           <div class="forecast">
             <h3>Tue</h3>
+            <p>24°C</p>
           </div>
         </div>
       </div>

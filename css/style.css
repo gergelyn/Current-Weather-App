@@ -6,22 +6,40 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-image: linear-gradient(90deg, #ffd89b, #19547b);
 }
 
 h1 {
   font-size: 3.75em;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #search-city {
   font-size: 1.25em;
+  border: 1px solid black;
+  border-right: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 1.25rem;
+  float: left;
 }
 
-h2 {
-  font-size: 2em;
-}
-
-#now {
-  font-size: 1.375em;
+#search-btn {
+  background-color: white;
+  font-size: 1.25em;
+  padding: 1.25rem;
+  float: left;
+  border: 1px solid black;
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
 }
 
 header {
@@ -39,36 +57,87 @@ section {
 }
 
 .container {
-  display: flex;
+  /*display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
+  display: grid;
+  grid-template: auto auto;
   width: 60vw;
+  background-color: white;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+}
+
+h2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-size: 2em;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
 }
 
 .current {
+  background-color: red;
+  grid-column-start: 1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: left;
   align-items: left;
-  align-self: left;
-  flex-grow: 1;
+  padding-bottom: 2rem;
+}
+
+#now {
+  font-size: 1.375em;
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+  padding-left: 3rem;
+}
+
+#current-temperature {
+  font-size: 2.5em;
+  padding-top: 0.75rem;
+  padding-left: 3rem;
+  cursor: pointer;
+}
+
+#current-icon {
+  width: 8em;
+  height: 8em;
 }
 
 .forecasts-section {
-  align-self: right;
+  background-color: green;
+  grid-column-start: 2;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 3;
+  justify-content: left;
+  align-items: left;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-#temperature-btn {
-  border: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 2.5em;
-  cursor: pointer;
+.forecast {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: top;
+  align-items: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  padding-left: 1.625rem;
+  padding-right: 1.625rem;
+}
+
+h3 {
+  font-size: 1.25em;
+  padding-bottom: 0.625rem;
+}
+
+.forecast p {
+  font-size: 1.5em;
+  padding-top: 0.625rem;
 }
 
 /*# sourceMappingURL=style.css.map */
