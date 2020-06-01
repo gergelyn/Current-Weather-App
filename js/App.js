@@ -34,39 +34,6 @@ inputButton.addEventListener("click", () => {
       currentIcon.setAttribute("src", iconURL);
     })
     .catch((err) => {
-      console.warn("Something went wrong " + err);
+      console.warn("Something went wrong in currentApi, " + err);
     });
 });
-
-/*
-window.addEventListener("load", () => {
-  let lat;
-  let lon;
-  let searchedCity = document.querySelector("#searched-city");
-  let currentTemperature = document.querySelector("#current-temperature");
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      lat = position.coords.latitude;
-      lon = position.coords.longitude;
-
-      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c87b73968acdc814157d174a59ddd93c`;
-
-      fetch(api)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data);
-          //const { temp } = data.main;
-          currentTemperature.innerText = kelvinToCelsius(data.main.temp) + "°C";
-          searchedCity.innerText = data.name + ", " + data.sys.country;
-        })
-        .catch((err) => {
-          console.warn("Something went wrong, " + err);
-        });
-    });
-  }
-});
-
-*/

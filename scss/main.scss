@@ -1,5 +1,4 @@
-$font: "Inter",
-sans-serif;
+$font: "Inter", sans-serif;
 $bg-sand: #ffd89b;
 $bg-blue: #19547b;
 
@@ -33,10 +32,29 @@ h1 {
   border-bottom-left-radius: 8px;
   padding: 1.25rem;
   float: left;
+  background-color: transparent;
+}
+
+#search-city::placeholder {
+  color: black;
+  background-color: transparent;
+}
+
+#search-city:-webkit-autofill,
+#search-city:-webkit-autofill:hover,
+#search-city:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#search-city:focus,
+#search-btn:focus,
+#search-btn:active {
+  outline: 0;
+  background: transparent;
 }
 
 #search-btn {
-  background-color: white;
+  background-color: transparent;
   font-size: 1.25em;
   padding: 1.25rem;
   float: left;
@@ -62,99 +80,48 @@ section {
 }
 
 .container {
-  /*display: flex;
-  flex-flow: row wrap;
+  display: flex;
+  flex-flow: column wrap;
   justify-content: center;
-  align-items: center;*/
-  display: grid;
-  grid-template-columns: auto auto auto;
-  width: 60vw;
-  background-color: white;
+  align-items: center;
+  width: 50vw;
+  background-color: transparent;
   margin-top: 1.5rem;
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .current--header {
-  //flex-grow: 1;
-  grid-column: 1 / span 3;
   display: flex;
   flex-flow: row nowrap;
   justify-content: left;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 3rem;
-  background-color: blue;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .current--header h2 {
   font-size: 2em;
 }
 
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
-
-.current {
-  grid-column: 1;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: left;
-  background-color: red;
-}
-
-#now {
-  font-size: 1.375em;
-  padding-top: 2rem;
-  padding-bottom: 0.75rem;
-  padding-left: 3rem;
-}
-
-#current-temperature {
-  font-size: 2.5em;
-  padding-top: 0.75rem;
-  padding-left: 3rem;
-  cursor: pointer;
-}
-
-#current-icon {
-  display: block;
-  width: 8em;
-  height: 8em;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
-}
-
-.forecasts-section {
-  grid-column: 2 / 4;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: green;
-}
-
-.forecast {
+.current--body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  float: left;
-  margin-top: 2rem;
-  padding-left: 1.625rem;
-  padding-right: 1.625rem;
 }
 
-.forecast h3 {
-  font-size: 1.25em;
-  padding-bottom: 0.625rem;
+#current-temperature {
+  font-size: 2.5em;
+  cursor: pointer;
 }
 
-.forecast p {
-  font-size: 1.5em;
-  padding-top: 0.625rem;
+#current-icon {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.5rem;
 }
