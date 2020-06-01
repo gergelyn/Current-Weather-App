@@ -16,13 +16,13 @@ body {
 
 h1 {
   font-size: 3.75em;
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
 }
 
 .search-section {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 #search-city {
@@ -63,36 +63,46 @@ section {
 
 .container {
   /*display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;*/
   display: grid;
-  grid-template: auto auto;
+  grid-template-columns: auto auto auto;
   width: 60vw;
   background-color: white;
   margin-top: 1.5rem;
   border-radius: 8px;
 }
 
-
-
-h2 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  font-size: 2em;
+.current--header {
+  //flex-grow: 1;
+  grid-column: 1 / span 3;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 3rem;
+  background-color: blue;
+}
+
+.current--header h2 {
+  font-size: 2em;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 .current {
-  background-color: red;
-  grid-column-start: 1;
+  grid-column: 1;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: left;
+  justify-content: center;
   align-items: left;
-  padding-bottom: 2rem;
+  background-color: red;
 }
 
 #now {
@@ -110,34 +120,36 @@ h2 {
 }
 
 #current-icon {
+  display: block;
   width: 8em;
   height: 8em;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .forecasts-section {
-  background-color: green;
-  grid-column-start: 2;
+  grid-column: 2 / 4;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: left;
-  align-items: left;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: green;
 }
 
 .forecast {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
   float: left;
+  margin-top: 2rem;
   padding-left: 1.625rem;
   padding-right: 1.625rem;
 }
 
-h3 {
+.forecast h3 {
   font-size: 1.25em;
   padding-bottom: 0.625rem;
 }

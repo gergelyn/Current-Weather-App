@@ -3,13 +3,11 @@ let searchedCity = document.querySelector("#searched-city");
 let currentTemperature = document.querySelector("#current-temperature");
 let temperatureBtn = document.querySelector("#temperature-btn");
 let currentIcon = document.querySelector("#current-icon");
+
 //  Temperature Conversion Formulaes
-
-
 let celsiusToFahrenheit = (temperature) => {
   return Math.round((temperature * 9) / 5 + 32);
 };
-
 
 inputButton.addEventListener("click", () => {
   let city = document.querySelector("#search-city").value;
@@ -23,8 +21,6 @@ inputButton.addEventListener("click", () => {
       let temp = data.main.temp;
       currentTemperature.innerText = Math.round(temp) + "°C";
       searchedCity.innerText = data.name + ", " + data.sys.country;
-      //  ToDo:
-      //    [] Make prettier code
       currentTemperature.addEventListener("click", () => {
         let searchCRegEx = /°C/;
         if (currentTemperature.innerText.match(searchCRegEx)) {
@@ -36,15 +32,11 @@ inputButton.addEventListener("click", () => {
       let iconCode = data.weather[0].icon;
       const iconURL = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
       currentIcon.setAttribute("src", iconURL);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.warn("Something went wrong " + err);
     });
 });
-
-
-
-
-
 
 /*
 window.addEventListener("load", () => {
